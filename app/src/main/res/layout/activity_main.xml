@@ -19,34 +19,37 @@
     android:id="@+id/mukeniaBallTextView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Welcome to Mukenia Ball"
-    android:layout_marginTop="35dp"
-    android:textSize="35sp"
     android:layout_alignParentTop="true"
     android:layout_centerHorizontal="true"
-    android:textStyle="bold"
-    android:textColor="@color/colorTextIcons"/>
+    android:layout_marginTop="35dp"
+    android:fontFamily="cursive"
+    android:text="Welcome to Mukenia Ball"
+    android:textColor="@color/colorTextIcons"
+    android:textSize="40sp"
+    android:textStyle="bold" />
 
   <Button
     android:id="@+id/findTeamButton"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Find Team"
     android:layout_alignParentBottom="true"
     android:layout_centerHorizontal="true"
     android:background="@color/colorAccent"
-    android:textColor="@color/colorTextIcons"/>
+    android:fontFamily="serif"
+    android:text="Find Team"
+    android:textColor="@color/colorTextIcons" />
 
   <EditText
     android:id="@+id/teamEditText"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
-    android:textColor="@color/colorTextIcons"
     android:layout_above="@+id/findTeamButton"
-    android:layout_marginBottom="10dp"
-    android:padding="5dp"
     android:layout_centerHorizontal="true"
-    android:hint="Enter Team Name"/>
+    android:layout_marginBottom="10dp"
+    android:background="@color/colorPrimary"
+    android:fontFamily="serif"
+    android:hint="Enter Team Name"
+    android:padding="5dp"
+    android:textColor="@color/colorTextIcons" />
 
 </RelativeLayout>

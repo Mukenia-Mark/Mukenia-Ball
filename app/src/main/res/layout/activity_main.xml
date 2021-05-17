@@ -25,7 +25,7 @@
     android:layout_alignParentTop="true"
     android:layout_centerHorizontal="true"
     android:textStyle="bold"
-    android:textColor="@color/colorTextIcon"/>
+    android:textColor="@color/colorTextIcons"/>
 
   <Button
     android:id="@+id/findTeamButton"
@@ -35,6 +35,18 @@
     android:layout_alignParentBottom="true"
     android:layout_centerHorizontal="true"
     android:background="@color/colorAccent"
-    android:textColor="@color/colorTextIcon"/>
+    android:textColor="@color/colorTextIcons"/>
+
+  <EditText
+    android:id="@+id/teamEditText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:textColor="@color/colorTextIcons"
+    android:layout_above="@+id/findTeamButton"
+    android:layout_marginBottom="10dp"
+    android:padding="5dp"
+    android:layout_centerHorizontal="true"
+    android:hint="Enter Team Name"/>
 
 </RelativeLayout>

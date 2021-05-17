@@ -7,26 +7,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String TAG = MainActivity.class.getSimpleName();
-    private Button mFindTeamButton;
-    private EditText mTeamEditText;
+  @BindView(R.id.findTeamButton) Button mFindTeamButton;
+  @BindView(R.id.teamEditText) EditText mTeamEditText;
+  @BindView(R.id.mukeniaBallTextView) TextView mMukeniaBallTextView;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mTeamEditText = (EditText) findViewById(R.id.teamEditText);
-        mFindTeamButton = (Button)findViewById(R.id.findTeamButton);
-        mFindTeamButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-              String team = mTeamEditText.getText().toString();
-              Intent intent = new Intent(MainActivity.this, TeamActivity.class);
-              intent.putExtra("team", team);
-              startActivity(intent);
-            }
-        });
-    }
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    ButterKnife.bind(this);
+    mFindTeamButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        String team = mTeamEditText.getText().toString();
+        Intent intent = new Intent(MainActivity.this, TeamActivity.class);
+        intent.putExtra("team", team);
+        startActivity(intent);
+      }
+    });
+  }
 }

@@ -12,7 +12,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
   @BindView(R.id.findTeamButton) Button mFindTeamButton;
   @BindView(R.id.teamEditText) EditText mTeamEditText;
   @BindView(R.id.mukeniaBallTextView) TextView mMukeniaBallTextView;
@@ -22,14 +22,15 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     ButterKnife.bind(this);
-    mFindTeamButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        String team = mTeamEditText.getText().toString();
-        Intent intent = new Intent(MainActivity.this, TeamActivity.class);
-        intent.putExtra("team", team);
-        startActivity(intent);
-      }
-    });
+    mFindTeamButton.setOnClickListener(this);
+  }
+  @Override
+  public void onClick(View v) {
+    if(v == mFindTeamButton) {
+      String team = mTeamEditText.getText().toString();
+      Intent intent = new Intent(MainActivity.this, TeamActivity.class);
+      intent.putExtra("team", team);
+      startActivity(intent);
+    }
   }
 }

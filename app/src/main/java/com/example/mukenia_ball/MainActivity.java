@@ -16,6 +16,7 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
   private Button mSignUpButton;
   private Button mGetStartedButton;
+  private Button mLogInButton;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +27,21 @@ public class MainActivity extends AppCompatActivity {
     mSignUpButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
+        Toast.makeText(MainActivity.this, "Sign Up", Toast.LENGTH_LONG).show();
       }
     });
     mGetStartedButton = (Button) findViewById(R.id.getStartedButton);
     mGetStartedButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
+        Toast.makeText(MainActivity.this, "Sign Up", Toast.LENGTH_LONG).show();
+      }
+    });
+    mLogInButton = (Button) findViewById(R.id.logInButton);
+    mLogInButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        Toast.makeText(MainActivity.this, "Log In", Toast.LENGTH_LONG).show();
       }
     });
   }

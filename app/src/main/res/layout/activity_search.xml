@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/pitch"
+  tools:context=".SearchActivity">
+
+  <TextView
+    android:id="@+id/mukeniaBallTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="35dp"
+    android:fontFamily="cursive"
+    android:text="Welcome"
+    android:textColor="@color/colorTextIcons"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    app:fontFamily="@font/short_stack" />
+
+  <TextView
+    android:id="@+id/searchBar"
+    android:layout_width="193dp"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="250dp"
+    android:background="@color/boxBack"
+    android:textColor="@color/colorPrimaryText"
+    android:text="What would you like to search for?"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:textAlignment="center"
+    android:gravity="center"/>
+
+  <Button
+    android:id="@+id/teamSearchButton"
+    android:layout_width="193dp"
+    android:layout_height="30dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="310dp"
+    android:text="Team"
+    android:background="@color/boxBack"/>
+
+  <Button
+    android:id="@+id/playerAndCoachSearchButton"
+    android:layout_width="193dp"
+    android:layout_height="30dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="350dp"
+    android:text="Player or Coach"
+    android:background="@color/boxBack"/>
+
+  <Button
+    android:id="@+id/leagueSearchButton"
+    android:layout_width="193dp"
+    android:layout_height="30dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="390dp"
+    android:text="League"
+    android:background="@color/boxBack"/>
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#000000"
+  tools:context=".SignUpActivity">
+
+
+  <ImageView
+    android:id="@+id/imageView"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    app:srcCompat="@drawable/pitch" />
+
+  <TextView
+    android:id="@+id/mukeniaBallTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="35dp"
+    android:fontFamily="cursive"
+    android:text="Mukenia Ball"
+    android:textColor="@color/colorTextIcons"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    app:fontFamily="@font/short_stack" />
+
+  <Button
+    android:id="@+id/confirmButton"
+    android:layout_width="193dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="215dp"
+    android:background="@color/boxBack"
+    android:text="Confirm" />
+
+  <TextView
+    android:layout_above="@id/confirmButton"
+    android:id="@+id/signUpBar"
+    android:layout_width="193dp"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="140dp"
+    android:background="@color/boxBack"
+    android:textColor="@color/colorPrimaryText"
+    android:text="Sign Up"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:textAlignment="center"
+    android:gravity="center"/>
+
+
+  <EditText
+    android:id="@+id/editTextUserName"
+    android:layout_width="193dp"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/confirmButton"
+    android:layout_marginBottom="105dp"
+    android:layout_centerHorizontal="true"
+    android:background="@color/boxBack"
+    android:ems="10"
+    android:hint="Enter Username:"
+    android:inputType="textPersonName" />
+
+  <EditText
+    android:id="@+id/editTextEmail"
+    android:layout_width="193dp"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/confirmButton"
+    android:layout_marginBottom="75dp"
+    android:layout_centerHorizontal="true"
+    android:background="@color/boxBack"
+    android:ems="10"
+    android:hint="Enter Email:"
+    android:inputType="textEmailAddress" />
+
+  <EditText
+    android:id="@+id/editTextPassword"
+    android:layout_width="193dp"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/confirmButton"
+    android:layout_marginBottom="45dp"
+    android:layout_centerHorizontal="true"
+    android:background="@color/boxBack"
+    android:ems="10"
+    android:hint="Enter Password:"
+    android:inputType="textPassword" />
+
+  <EditText
+    android:id="@+id/editTextReEnterPassword"
+    android:layout_width="193dp"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/confirmButton"
+    android:layout_marginBottom="15dp"
+    android:layout_centerHorizontal="true"
+    android:background="@color/boxBack"
+    android:ems="10"
+    android:hint="Re-enter Password:"
+    android:inputType="textPassword" />
+
+
+</RelativeLayout>

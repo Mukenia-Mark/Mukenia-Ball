@@ -8,29 +8,31 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-  @BindView(R.id.findTeamButton) Button mFindTeamButton;
-  @BindView(R.id.teamEditText) EditText mTeamEditText;
-  @BindView(R.id.mukeniaBallTextView) TextView mMukeniaBallTextView;
+public class MainActivity extends AppCompatActivity {
+  private Button mSignUpButton;
+  private Button mGetStartedButton;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    ButterKnife.bind(this);
-    mFindTeamButton.setOnClickListener(this);
-  }
-  @Override
-  public void onClick(View v) {
-    if(v == mFindTeamButton) {
-      String team = mTeamEditText.getText().toString();
-      Intent intent = new Intent(MainActivity.this, TeamActivity.class);
-      intent.putExtra("team", team);
-      startActivity(intent);
-    }
+
+    mSignUpButton = (Button) findViewById(R.id.signUpButton);
+    mSignUpButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+      }
+    });
+    mGetStartedButton = (Button) findViewById(R.id.getStartedButton);
+    mGetStartedButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+      }
+    });
   }
 }

@@ -23,9 +23,7 @@ public class TeamActivity extends AppCompatActivity {
       "Chelsea","Inter Milan","Juventus","Lille OSC","Liverpool","Manchester City","Manchester United","Monaco","Paris Saint Germain",
       "Real Madrid","Red Bull Leipzig","Tottenham Hotspur"};
   private String[] leagues = new String[] {
-      "Serie A","English Premier League","La Liga Santander","La Liga Santander","Bundesliga","Bundesliga",
-      "English Premier League","Serie A","Serie A","Ligue 1","English Premier League","English Premier League","English Premier League",
-       "Ligue 1","Ligue 1","La Liga Santander","Bundesliga","English Premier League"};
+      "","","","","","","","","","","","","","","","","",""};
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {

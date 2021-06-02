@@ -55,7 +55,7 @@
 
 
   <EditText
-    android:id="@+id/editTextUserName"
+    android:id="@+id/editTextSignUpUserName"
     android:layout_width="193dp"
     android:layout_height="wrap_content"
     android:layout_above="@id/signUpConfirmButton"
@@ -67,7 +67,7 @@
     android:inputType="textPersonName" />
 
   <EditText
-    android:id="@+id/editTextEmail"
+    android:id="@+id/editTextSignUpEmail"
     android:layout_width="193dp"
     android:layout_height="wrap_content"
     android:layout_above="@id/signUpConfirmButton"
@@ -79,7 +79,7 @@
     android:inputType="textEmailAddress" />
 
   <EditText
-    android:id="@+id/editTextPassword"
+    android:id="@+id/editTextSignUpPassword"
     android:layout_width="193dp"
     android:layout_height="wrap_content"
     android:layout_above="@id/signUpConfirmButton"
@@ -91,7 +91,7 @@
     android:inputType="textPassword" />
 
   <EditText
-    android:id="@+id/editTextReEnterPassword"
+    android:id="@+id/editTextSignUpReEnterPassword"
     android:layout_width="193dp"
     android:layout_height="wrap_content"
     android:layout_above="@id/signUpConfirmButton"

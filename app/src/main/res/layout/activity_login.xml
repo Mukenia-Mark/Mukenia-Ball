@@ -55,7 +55,7 @@
 
 
   <EditText
-    android:id="@+id/editTextUserName"
+    android:id="@+id/editTextLoginUserName"
     android:layout_width="193dp"
     android:layout_height="wrap_content"
     android:layout_above="@id/logInConfirmButton"
@@ -67,7 +67,7 @@
     android:inputType="textPersonName" />
 
   <EditText
-    android:id="@+id/editTextPassword"
+    android:id="@+id/editTextLoginPassword"
     android:layout_width="193dp"
     android:layout_height="wrap_content"
     android:layout_above="@id/logInConfirmButton"

@@ -29,7 +29,7 @@
     app:fontFamily="@font/short_stack" />
 
   <Button
-    android:id="@+id/confirmButton"
+    android:id="@+id/signUpConfirmButton"
     android:layout_width="193dp"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
@@ -39,7 +39,7 @@
     android:text="Confirm" />
 
   <TextView
-    android:layout_above="@id/confirmButton"
+    android:layout_above="@id/signUpConfirmButton"
     android:id="@+id/signUpBar"
     android:layout_width="193dp"
     android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
     android:id="@+id/editTextUserName"
     android:layout_width="193dp"
     android:layout_height="wrap_content"
-    android:layout_above="@id/confirmButton"
+    android:layout_above="@id/signUpConfirmButton"
     android:layout_marginBottom="105dp"
     android:layout_centerHorizontal="true"
     android:background="@color/boxBack"
@@ -70,7 +70,7 @@
     android:id="@+id/editTextEmail"
     android:layout_width="193dp"
     android:layout_height="wrap_content"
-    android:layout_above="@id/confirmButton"
+    android:layout_above="@id/signUpConfirmButton"
     android:layout_marginBottom="75dp"
     android:layout_centerHorizontal="true"
     android:background="@color/boxBack"
@@ -82,7 +82,7 @@
     android:id="@+id/editTextPassword"
     android:layout_width="193dp"
     android:layout_height="wrap_content"
-    android:layout_above="@id/confirmButton"
+    android:layout_above="@id/signUpConfirmButton"
     android:layout_marginBottom="45dp"
     android:layout_centerHorizontal="true"
     android:background="@color/boxBack"
@@ -94,7 +94,7 @@
     android:id="@+id/editTextReEnterPassword"
     android:layout_width="193dp"
     android:layout_height="wrap_content"
-    android:layout_above="@id/confirmButton"
+    android:layout_above="@id/signUpConfirmButton"
     android:layout_marginBottom="15dp"
     android:layout_centerHorizontal="true"
     android:background="@color/boxBack"

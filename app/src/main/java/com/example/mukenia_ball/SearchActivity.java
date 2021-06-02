@@ -9,17 +9,20 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class SearchActivity extends AppCompatActivity {
-  private Button mTeamSearchButton;
-  private Button mPlayerAndCoachSearchButton;
-  private Button mLeagueSearchButton;
+  @BindView(R.id.teamSearchButton) Button mTeamSearchButton;
+  @BindView(R.id.playerAndCoachSearchButton) Button mPlayerAndCoachSearchButton;
+  @BindView(R.id.leagueSearchButton) Button mLeagueSearchButton;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_search);
+    ButterKnife.bind(this);
 
-    mTeamSearchButton = (Button) findViewById(R.id.teamSearchButton);
     mTeamSearchButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -27,7 +30,6 @@ public class SearchActivity extends AppCompatActivity {
         startActivity(intent);
       }
     });
-    mPlayerAndCoachSearchButton = (Button) findViewById(R.id.playerAndCoachSearchButton);
     mPlayerAndCoachSearchButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -35,7 +37,6 @@ public class SearchActivity extends AppCompatActivity {
         startActivity(intent);
       }
     });
-    mLeagueSearchButton = (Button) findViewById(R.id.leagueSearchButton);
     mLeagueSearchButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {

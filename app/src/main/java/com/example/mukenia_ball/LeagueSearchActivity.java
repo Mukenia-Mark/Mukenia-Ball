@@ -7,18 +7,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class LeagueSearchActivity extends AppCompatActivity {
   public static final String TAG = LogInActivity.class.getSimpleName();
-  private Button mFindLeagueButton;
-  private EditText mLeagueSearchBar;
+  @BindView(R.id.findLeagueButton) Button mFindLeagueButton;
+  @BindView(R.id.leagueSearchBar) EditText mLeagueSearchBar;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_leaguesearch);
+    ButterKnife.bind(this);
 
-    mLeagueSearchBar = (EditText) findViewById(R.id.leagueSearchBar);
-    mFindLeagueButton = (Button) findViewById(R.id.findLeagueButton);
     mFindLeagueButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {

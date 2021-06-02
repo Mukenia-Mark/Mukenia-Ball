@@ -10,21 +10,22 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class LogInActivity extends AppCompatActivity {
   public static final String TAG = LogInActivity.class.getSimpleName();
-  private Button mlogInConfirmButton;
-  private EditText mEditTextLoginUserName;
-  private EditText mEditTextLoginPassword;
+  @BindView(R.id.logInConfirmButton) Button mLogInConfirmButton;
+  @BindView(R.id.editTextLoginUserName) EditText mEditTextLoginUserName;
+  @BindView(R.id.editTextLoginPassword) EditText mEditTextLoginPassword;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_login);
+    ButterKnife.bind(this);
 
-    mEditTextLoginUserName = (EditText) findViewById(R.id.editTextLoginUserName);
-    mEditTextLoginPassword = (EditText) findViewById(R.id.editTextLoginPassword);
-    mlogInConfirmButton = (Button) findViewById(R.id.logInConfirmButton);
-    mlogInConfirmButton.setOnClickListener(new View.OnClickListener() {
+    mLogInConfirmButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
         Intent intent = new Intent(LogInActivity.this, SearchActivity.class);

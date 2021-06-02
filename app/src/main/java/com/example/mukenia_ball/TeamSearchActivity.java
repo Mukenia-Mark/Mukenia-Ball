@@ -10,18 +10,20 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class TeamSearchActivity extends AppCompatActivity {
   public static final String TAG = LogInActivity.class.getSimpleName();
-  private Button mFindTeamButton;
-  private EditText mTeamSearchBar;
+  @BindView(R.id.findTeamButton) Button mFindTeamButton;
+  @BindView(R.id.teamSearchBar) EditText mTeamSearchBar;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_teamsearch);
+    ButterKnife.bind(this);
 
-    mTeamSearchBar = (EditText) findViewById(R.id.teamSearchBar);
-    mFindTeamButton = (Button) findViewById(R.id.findTeamButton);
     mFindTeamButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {

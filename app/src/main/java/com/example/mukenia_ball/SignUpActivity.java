@@ -10,24 +10,23 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class SignUpActivity extends AppCompatActivity {
   public static final String TAG = SignUpActivity.class.getSimpleName();
-  private Button mSignUpConfirmButton;
-  private EditText mEditTextSignUpUserName;
-  private EditText mEditTextSignUpEmail;
-  private EditText mEditTextSignUpPassword;
-  private EditText meEditTextSignUpReEnterPassword;
+  @BindView(R.id.signUpConfirmButton) Button mSignUpConfirmButton;
+  @BindView(R.id.editTextSignUpUserName) EditText mEditTextSignUpUserName;
+  @BindView(R.id.editTextSignUpEmail) EditText mEditTextSignUpEmail;
+  @BindView(R.id.editTextSignUpPassword) EditText mEditTextSignUpPassword;
+  @BindView(R.id.editTextSignUpReEnterPassword) EditText meEditTextSignUpReEnterPassword;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_signup);
+    ButterKnife.bind(this);
 
-    mEditTextSignUpUserName = (EditText) findViewById(R.id.editTextSignUpUserName);
-    mEditTextSignUpEmail = (EditText) findViewById(R.id.editTextSignUpEmail);
-    mEditTextSignUpPassword = (EditText) findViewById(R.id.editTextSignUpPassword);
-    meEditTextSignUpReEnterPassword = (EditText) findViewById(R.id.editTextSignUpReEnterPassword);
-    mSignUpConfirmButton = (Button) findViewById(R.id.signUpConfirmButton);
     mSignUpConfirmButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {

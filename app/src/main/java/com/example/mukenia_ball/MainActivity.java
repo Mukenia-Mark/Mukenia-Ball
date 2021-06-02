@@ -8,17 +8,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
-  private Button mSignUpButton;
-  private Button mGetStartedButton;
-  private Button mLogInButton;
+  @BindView(R.id.signUpButton) Button mSignUpButton;
+  @BindView(R.id.getStartedButton) Button mGetStartedButton;
+  @BindView(R.id.logInButton) Button mLogInButton;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    ButterKnife.bind(this);
 
-    mSignUpButton = (Button) findViewById(R.id.signUpButton);
     mSignUpButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -27,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
-    mGetStartedButton = (Button) findViewById(R.id.getStartedButton);
     mGetStartedButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -36,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
-    mLogInButton = (Button) findViewById(R.id.logInButton);
     mLogInButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {

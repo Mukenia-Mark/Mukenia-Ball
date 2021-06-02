@@ -20,24 +20,4 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 @LargeTest
 public class MainActivityInstrumentationTest {
 
-  @Rule
-  public ActivityScenarioRule<MainActivity> activityRule =
-      new ActivityScenarioRule<>(MainActivity.class);
-  @Test
-  public void validateEditText() {
-    onView(withId(R.id.teamEditText)).perform(typeText("Manchester"))
-        .check(matches(withText("Manchester")));
-  }
-  @Test
-  public void teamIsSentToTeamsActivity() {
-    String team = "Manchester";
-    onView(withId(R.id.teamEditText)).perform(typeText(team)).perform(closeSoftKeyboard());
-    try {
-      Thread.sleep(250);
-    } catch (InterruptedException e) {
-      System.out.println("got interrupted!");
-    }
-    onView(withId(R.id.findTeamButton)).perform(click());
-    onView(withId(R.id.teamTextView)).check(matches(withText("Here are all the teams with the name " + team)));
-  }
 }

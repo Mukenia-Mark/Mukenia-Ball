@@ -23,31 +23,4 @@ import static org.hamcrest.CoreMatchers.not;
 
 @RunWith(AndroidJUnit4.class)
 public class TeamActivityInstrumentationTest {
-  private View activityDecorView;
-
-  @Rule
-  public ActivityScenarioRule<TeamActivity> activityTestRule =
-    new ActivityScenarioRule<>(TeamActivity.class);
-
-  @Before
-  public void setUp() {
-    activityTestRule.getScenario().onActivity(new ActivityScenario.ActivityAction<TeamActivity>() {
-      @Override
-      public void perform(TeamActivity activity) {
-        activityDecorView = activity.getWindow().getDecorView();
-      }
-    });
-  }
-
-  @Test
-  public void listItemClickDisplaysToastWithCorrectTeamName() {
-    String teamName = "A.C Milan";
-    onData(anything())
-        .inAdapterView(withId(R.id.teamListView))
-        .atPosition(0)
-        .perform(click());
-    onData(withText(teamName)).inRoot(withDecorView(not(activityDecorView)))
-        .check(matches(withText(teamName)));
-  }
-
 }

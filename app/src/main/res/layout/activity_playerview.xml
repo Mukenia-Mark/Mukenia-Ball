@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  tools:context=".PlayerViewActivity"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <ImageView
+    android:id="@+id/teamLogo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="310dp"
+    android:layout_marginTop="40dp"
+    app:srcCompat="@drawable/ramos" />
+
+  <TextView
+    android:id="@+id/playerNameView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:textSize="17sp"
+    android:textStyle="bold"
+    android:textColor="@color/colorPrimaryText"
+    android:layout_marginTop="10dp"
+    android:text="Sergio Ramos" />
+
+  <ListView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="140dp"/>
+
+
+</RelativeLayout>

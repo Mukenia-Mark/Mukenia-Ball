@@ -15,6 +15,12 @@
     <activity android:name=".PlayerAndCoachSearchActivity"></activity>
     <activity android:name=".LeagueSearchActivity"></activity>
     <activity android:name=".SearchActivity"></activity>
+    <activity android:name=".TeamMenuActivity"></activity>
+    <activity android:name=".TeamViewActivity"></activity>
+    <activity android:name=".PlayerViewActivity"></activity>
+    <activity android:name=".PlayerMenuActivity"></activity>
+    <activity android:name=".LeagueViewActivity"></activity>
+    <activity android:name=".LeagueMenuActivity"></activity>
     <activity android:name=".MainActivity"
       android:theme="@style/NoActionBarTheme">
       <intent-filter>

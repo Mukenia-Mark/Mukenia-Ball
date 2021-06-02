@@ -1,5 +1,6 @@
 package com.example.mukenia_ball;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +26,9 @@ public class TeamSearchActivity extends AppCompatActivity {
       @Override
       public void onClick(View view) {
         String team = mTeamSearchBar.getText().toString();
-        Toast.makeText(TeamSearchActivity.this, team, Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(TeamSearchActivity.this, TeamMenuActivity.class);
+        intent.putExtra("team", team);
+        startActivity(intent);
       }
     });
   }

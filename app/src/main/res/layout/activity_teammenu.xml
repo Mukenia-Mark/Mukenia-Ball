@@ -15,12 +15,29 @@
     android:text="Teams "
     android:textColor="@color/colorPrimaryText"
     android:textSize="15sp"
-    android:textStyle="bold" />
+    android:textStyle="bold"
+    android:visibility="gone"/>
+
+  <ProgressBar
+    android:id="@+id/teamProgressBar"
+    style="?android:attr/progressBarStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"/>
+
+  <TextView
+    android:id="@+id/teamErrorTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_margin="16dp"
+    android:visibility="gone" />
 
   <ListView
     android:id="@+id/teamList"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="25dp"/>
+    android:layout_marginTop="25dp"
+    android:visibility="gone"/>
 
 </RelativeLayout>

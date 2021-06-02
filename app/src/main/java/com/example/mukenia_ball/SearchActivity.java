@@ -1,5 +1,6 @@
 package com.example.mukenia_ball;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,21 +23,24 @@ public class SearchActivity extends AppCompatActivity {
     mTeamSearchButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        Toast.makeText(SearchActivity.this, "Team Search", Toast.LENGTH_LONG);
+        Intent intent = new Intent(SearchActivity.this, TeamSearchActivity.class);
+        startActivity(intent);
       }
     });
     mPlayerAndCoachSearchButton = (Button) findViewById(R.id.playerAndCoachSearchButton);
     mPlayerAndCoachSearchButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        Toast.makeText(SearchActivity.this, "Player or Coach Search", Toast.LENGTH_LONG);
+        Intent intent = new Intent(SearchActivity.this, PlayerAndCoachSearchActivity.class);
+        startActivity(intent);
       }
     });
     mLeagueSearchButton = (Button) findViewById(R.id.leagueSearchButton);
     mLeagueSearchButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        Toast.makeText(SearchActivity.this, "League Search", Toast.LENGTH_LONG);
+        Intent intent = new Intent(SearchActivity.this, LeagueSearchActivity.class);
+        startActivity(intent);
       }
     });
   }
